@@ -50,29 +50,3 @@ Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
 end
 
 puts "done"
-
-#luis@luis-K53SD:~/ramparts$ cd ~/zip && ruby zip.rb
-#directory of the files
-#/home/luis/grive/the_realist/01
-#directory where you want the zip
-#/home/luis/grive/the_realist/
-#Zip name
-#teste
-#creating a .zip
-#/var/lib/gems/1.9.1/gems/rubyzip-1.0.0/lib/zip/entry.rb:49:in `check_name': Illegal ZipEntry name '/15.jpg', name must not start with / (Zip::ZipEntryNameError)
-#	from /var/lib/gems/1.9.1/gems/rubyzip-1.0.0/lib/zip/entry.rb:55:in `initialize'
-#	from /var/lib/gems/1.9.1/gems/rubyzip-1.0.0/lib/zip/file.rb:256:in `new'
-#	from /var/lib/gems/1.9.1/gems/rubyzip-1.0.0/lib/zip/file.rb:256:in `add'
-#	from zip.rb:12:in `block (2 levels) in <main>'
-#	from zip.rb:11:in `each'
-#	from zip.rb:11:in `block in <main>'
-#	from /var/lib/gems/1.9.1/gems/rubyzip-1.0.0/lib/zip/file.rb:98:in `open'
-#	from zip.rb:10:in `<main>'
-#luis@luis-K53SD:~/zip$ ruby zip.rb
-#directory of the files
-#/home/luis/grive/the_realist/01/
-#directory where you want the zip
-#/home/luis/grive/the_realist/
-#Zip name
-#teste
-#creating a .zip
