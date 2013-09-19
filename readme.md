@@ -1,0 +1,3 @@
+A scraper for issues of Ramparts, the muckraking magazine of the 60s, edited by Warren Hinckle. Every issue is available at http://unz.org/Pub/Ramparts, but the website as a complicated way to download the .pdfs.
+For some reason I can't download the whole issue of a given magazine in just a file, so I normally download from 1 to 50 and then the rest. 
+The way it is now, I think this script is not a big improvement compared to the site itself, but at least it's easier for my to organize the issues I download with it.
