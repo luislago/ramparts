@@ -37,13 +37,11 @@ puts "last page"
 last_page = gets.chomp
 total_pages = first_page + "-" + last_page
 puts "Creating #{issue}, pages #{total_pages}"
-pagina = BASE_ramparts_URL + issue + "/" + total_pages + "/" #it creates a pdf starting on the first page and ending
-#on the page I set
+pagina = BASE_ramparts_URL + issue + "/" + total_pages + "/" 
 
 
 		open(pagina) {|f|
-File.open("#{ISSUE_DIR}/#{total_pages}.pdf", 'w') do |file| file.puts f.read end}  #downloads the created pdf on the 
-	#DATA_DIR and gives it the year and month of the issue as the name
+File.open("#{ISSUE_DIR}/#{total_pages}.pdf", 'w') do |file| file.puts f.read end}  
 elsif selector == "zip"
 	puts "year"
 year = gets.chomp
@@ -53,32 +51,27 @@ puts "first page"
 first_page = gets.chomp
 puts "last page"
 last_page = gets.chomp
-total_pages = first_page + "-" + last_page #I have to set the number of pages, so the website can create the pdf with the complete issue to
-#to download
+total_pages = first_page + "-" + last_page 
 issue = year + month
 ISSUE_DIR = DATA_DIR + "/" + issue
 Dir.mkdir(ISSUE_DIR) unless File.exists?(ISSUE_DIR)
 puts "Creating #{issue}, pages #{total_pages}"
-pagina = BASE_ramparts_URL + issue + "/" + total_pages + "/" #it creates a pdf starting on the first page and ending
-#on the page I set
+pagina = BASE_ramparts_URL + issue + "/" + total_pages + "/" 
 
 
 		open(pagina) {|f|
-File.open("#{ISSUE_DIR}/#{total_pages}.pdf", 'w') do |file| file.puts f.read end}  #downloads the created pdf on the 
-	#DATA_DIR and gives it the year and month of the issue as the name
+File.open("#{ISSUE_DIR}/#{total_pages}.pdf", 'w') do |file| file.puts f.read end}  
 puts "first page"
 first_page = gets.chomp
 puts "last page"
 last_page = gets.chomp
 total_pages = first_page + "-" + last_page
 puts "Creating #{issue}, pages #{total_pages}"
-pagina = BASE_ramparts_URL + issue + "/" + total_pages + "/" #it creates a pdf starting on the first page and ending
-#on the page I set
+pagina = BASE_ramparts_URL + issue + "/" + total_pages + "/" 
 
 
 		open(pagina) {|f|
-File.open("#{ISSUE_DIR}/#{total_pages}.pdf", 'w') do |file| file.puts f.read end}  #downloads the created pdf on the 
-	#DATA_DIR and gives it the year and month of the issue as the name
+File.open("#{ISSUE_DIR}/#{total_pages}.pdf", 'w') do |file| file.puts f.read end}  
 issue_dirzip = ISSUE_DIR + "/"
  puts "creating a .zip"
  zipfile_name = "/home/luis/ramparts/" + issue + ".zip"
@@ -87,9 +80,8 @@ Zip::ZipFile.open(zipfile_name, Zip::ZipFile::CREATE) do |zipfile|
       zipfile.add(file.sub(issue_dirzip, ''), file)
     end
 end
-else selector != "pdf" or selector != "zip"
+else selector != "pdf" or selector != "zip" 
 puts "wrong option. try again"
-end
-end until selector == "pdf" or selector == "zip"
+end #if input is not "pdf" or "zip", it will ask again for input
+end until selector == "pdf" or selector == "zip" #continues to ask for input until "pdf" or "zip" is introduced
 puts "done"
-
